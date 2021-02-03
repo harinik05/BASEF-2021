@@ -1,0 +1,65 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1906                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "2.2/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+results
+{
+    forces
+    {
+        vector
+        {
+            normalForce     ( 5.549761520623719 -2.837610709243035 7.671344139815026 );
+            tangentialForce ( 25.6027493528272 0.8639957812297567 0.02111244820294672 );
+            porousForce     ( 0 0 0 );
+            normalMoment    ( 27.42385162128301 -67.05743629142889 -26.4104239640347 );
+            tangentialMoment ( 0.1331586790061218 1.859684315456762 -59.01533590815571 );
+            porousMoment    ( 0 0 0 );
+        }
+    }
+    forceCoeffs
+    {
+        scalar
+        {
+            Cd              2.492200869876073;
+            Cs              -0.6153965270414377;
+            Cl              -0.1578891942410622;
+            CmRoll          2.20456082402313;
+            CmPitch         6.834060789775232;
+            CmYaw           -5.215820158077769;
+            Cd(f)           3.450661258961166;
+            Cd(r)           -0.9584603890850933;
+            Cs(f)           -5.523518421598487;
+            Cs(r)           4.90812189455705;
+            Cl(f)           6.755116192654701;
+            Cl(r)           -6.913005386895763;
+        }
+    }
+    surfaceFieldValue
+    {
+        scalar
+        {
+            areaAverage(peak,p) 0.4328085683155877;
+        }
+        vector
+        {
+            areaAverage(peak,U) ( 0 0 0 );
+            areaAverage(peak,vorticity) ( 1.009344528545253 -0.2987430759072685 -1.910715623210336 );
+        }
+    }
+}
+
+
+// ************************************************************************* //
